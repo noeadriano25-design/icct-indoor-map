@@ -140,7 +140,6 @@ let searchResults = [];
 let currentImageOverlay = null;
 
 // ─── Page Elements ────────────────────────────────────────────────────────────
-// NOTE: Initialized inside init() to ensure DOM is ready before querying elements
 let pages = {};
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
