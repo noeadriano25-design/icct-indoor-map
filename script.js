@@ -140,16 +140,18 @@ let searchResults = [];
 let currentImageOverlay = null;
 
 // ─── Page Elements ────────────────────────────────────────────────────────────
-const pages = {
-    welcome: document.getElementById('welcomePage'),
-    main:    document.getElementById('mainPage'),
-    search:  document.getElementById('searchPage'),
-    floor:   document.getElementById('floorPage'),
-    map:     document.getElementById('mapPage'),
-};
+// NOTE: Initialized inside init() to ensure DOM is ready before querying elements
+let pages = {};
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 function init() {
+    pages = {
+        welcome: document.getElementById('welcomePage'),
+        main:    document.getElementById('mainPage'),
+        search:  document.getElementById('searchPage'),
+        floor:   document.getElementById('floorPage'),
+        map:     document.getElementById('mapPage'),
+    };
     setupEventListeners();
     createKeyboard();
 }
